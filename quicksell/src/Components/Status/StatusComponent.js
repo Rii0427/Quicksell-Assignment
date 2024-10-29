@@ -19,7 +19,12 @@ const StatusComponent = ({ type, data }) => {
                     {type==="In_Progress" && <img src={In_Progress} />}
                     {type==="Done" && <img src={Done} />}
                     {type==="Cancelled" && <img src={Cancelled} />}
-                    <span>{type}</span>
+
+                    {type==="Backlog" && <span>Backlog</span>}
+                    {type==="Todo" && <span>Todo</span>}
+                    {type==="In_Progress" && <span>In Progress</span>}
+                    {type==="Done" && <span>Done</span>}
+                    {type==="Cancelled" && <span>Canceled</span>}
                     <span>{TicketData.length}</span>
                 </div>
                 <div className='status-top-1'>
